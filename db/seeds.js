@@ -11,67 +11,67 @@ const reset = async () => {
   return User.create([
     {
       name: "Admin User",
-      username: "admin@email.com",
+      email: "admin@email.com",
       password: bcrypt.hashSync("password", 10),
       admin: true
     },
     {
       name: "Student User 1",
-      username: "student@email.com",
+      email: "student@email.com",
       password: bcrypt.hashSync("password", 10),
       admin: false
     },
     {
       name: "Student User 2",
-      username: "student2@email.com",
+      email: "student2@email.com",
       password: bcrypt.hashSync("password", 10),
       admin: false
     },
     {
       name: "Student User 3",
-      username: "student3@email.com",
+      email: "student3@email.com",
       password: bcrypt.hashSync("password", 10),
       admin: false
     },
     {
       name: "Student User 4",
-      username: "student4@email.com",
+      email: "student4@email.com",
       password: bcrypt.hashSync("password", 10),
       admin: false
     },
     {
       name: "Student User 5",
-      username: "student5@email.com",
+      email: "student5@email.com",
       password: bcrypt.hashSync("password", 10),
       admin: false
     },
     {
       name: "Student User 6",
-      username: "student6@email.com",
+      email: "student6@email.com",
       password: bcrypt.hashSync("password", 10),
       admin: false
     },
     {
       name: "Student User 7",
-      username: "student7@email.com",
+      email: "student7@email.com",
       password: bcrypt.hashSync("password", 10),
       admin: false
     },
     {
       name: "Student User 8",
-      username: "student8@email.com",
+      email: "student8@email.com",
       password: bcrypt.hashSync("password", 10),
       admin: false
     },
     {
       name: "Student User 9",
-      username: "student9@email.com",
+      email: "student9@email.com",
       password: bcrypt.hashSync("password", 10),
       admin: false
     },
     {
       name: "Student User 10",
-      username: "student10@email.com",
+      email: "student10@email.com",
       password: bcrypt.hashSync("password", 10),
       admin: false
     }
