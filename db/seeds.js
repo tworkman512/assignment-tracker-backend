@@ -10,69 +10,80 @@ const reset = async () => {
   await User.deleteMany(); // Deletes all records
   return User.create([
     {
-      name: "Admin User",
       email: "admin@email.com",
       password: bcrypt.hashSync("password", 10),
+      firstName: "Admin",
+      lastName: "User",
       admin: true
     },
     {
-      name: "Student User 1",
       email: "student@email.com",
       password: bcrypt.hashSync("password", 10),
+      firstName: "Student",
+      lastName: "User 1",
       admin: false
     },
     {
-      name: "Student User 2",
       email: "student2@email.com",
       password: bcrypt.hashSync("password", 10),
+      firstName: "Student",
+      lastName: "User 2",
       admin: false
     },
     {
-      name: "Student User 3",
       email: "student3@email.com",
       password: bcrypt.hashSync("password", 10),
+      firstName: "Student",
+      lastName: "User 3",
       admin: false
     },
     {
-      name: "Student User 4",
       email: "student4@email.com",
       password: bcrypt.hashSync("password", 10),
+      firstName: "Student",
+      lastName: "User 4",
       admin: false
     },
     {
-      name: "Student User 5",
       email: "student5@email.com",
       password: bcrypt.hashSync("password", 10),
+      firstName: "Student",
+      lastName: "User 5",
       admin: false
     },
     {
-      name: "Student User 6",
       email: "student6@email.com",
       password: bcrypt.hashSync("password", 10),
+      firstName: "Student",
+      lastName: "User 6",
       admin: false
     },
     {
-      name: "Student User 7",
       email: "student7@email.com",
       password: bcrypt.hashSync("password", 10),
+      firstName: "Student",
+      lastName: "User 7",
       admin: false
     },
     {
-      name: "Student User 8",
       email: "student8@email.com",
       password: bcrypt.hashSync("password", 10),
+      firstName: "Student",
+      lastName: "User 8",
       admin: false
     },
     {
-      name: "Student User 9",
       email: "student9@email.com",
       password: bcrypt.hashSync("password", 10),
+      firstName: "Student",
+      lastName: "User 9",
       admin: false
     },
     {
-      name: "Student User 10",
       email: "student10@email.com",
       password: bcrypt.hashSync("password", 10),
+      firstName: "Student",
+      lastName: "User 10",
       admin: false
     }
   ]);
