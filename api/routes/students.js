@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const User = require("../models/user");
 const { isLoggedIn, isSameUser } = require("../middleware/auth");
-const { validate } = require("../middleware/users");
+const { validate } = require("../middleware/students");
 
 const excludeKeys = "-__v -password";
 
@@ -11,14 +11,14 @@ router.get("/", isLoggedIn, async (req, res, next) => {
   res.json({ status, response });
 });
 
-router.get("/:userId", isLoggedIn, async (req, res, next) => {
+router.get("/:studentId", isLoggedIn, async (req, res, next) => {
   const status = 200;
   const response = await User.findById(req.params.userId).select(excludeKeys);
   res.json({ status, response });
 });
 
 router.put(
-  "/:userId",
+  "/:studentId",
   isLoggedIn,
   isSameUser,
   validate,
@@ -36,7 +36,7 @@ router.put(
   }
 );
 
-router.delete("/:userId", isLoggedIn, isSameUser, async (req, res, next) => {
+router.delete("/:studentId", isLoggedIn, isSameUser, async (req, res, next) => {
   const status = 200;
 
   const query = { _id: req.params.userId };
