@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const User = require("../models/user");
+const Assignment = require("../models/assignment");
 const { isLoggedIn, isSameUser } = require("../middleware/auth");
-const { validate } = require("../middleware/students");
+const { validate } = require("../middleware/assignments");
 
 const excludeKeys = "-__v -password";
 
@@ -13,18 +13,20 @@ const excludeKeys = "-__v -password";
 
 router.get("/", async (req, res, next) => {
   const status = 200;
-  const response = await User.find(req.query).select(excludeKeys);
+  const response = await Assignment.find(req.query).select(excludeKeys);
   res.json({ status, response });
 });
 
-router.get("/:studentId", isLoggedIn, async (req, res, next) => {
+router.get("/:assignmentId", isLoggedIn, async (req, res, next) => {
   const status = 200;
-  const response = await User.findById(req.params.userId).select(excludeKeys);
+  const response = await Assignment.findById(req.params.userId).select(
+    excludeKeys
+  );
   res.json({ status, response });
 });
 
 router.put(
-  "/:studentId",
+  "/:assignmentId",
   isLoggedIn,
   isSameUser,
   validate,
