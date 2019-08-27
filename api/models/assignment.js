@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const schema = mongoose.Schema(
+const assignmentsSchema = mongoose.Schema(
   {
     title: {
       type: String,
@@ -26,4 +26,5 @@ const schema = mongoose.Schema(
   { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
 );
 
-module.exports = mongoose.model("Assignment", schema);
+// module.exports = mongoose.model("Assignment", assignmentsSchema);
+module.exports = assignmentsSchema;

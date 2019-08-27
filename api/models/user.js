@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const assignmentsSchema = require("./assignment");
 
 const schema = mongoose.Schema(
   {
@@ -18,7 +19,8 @@ const schema = mongoose.Schema(
       type: String,
       required: true
     },
-    admin: { type: Boolean, default: false }
+    admin: { type: Boolean, default: false },
+    assignments: [assignmentsSchema]
   },
   { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
 );

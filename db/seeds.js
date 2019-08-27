@@ -21,7 +21,30 @@ const reset = async () => {
       password: bcrypt.hashSync("password", 10),
       firstName: "Student",
       lastName: "User 1",
-      admin: false
+      admin: false,
+      assignments: [
+        {
+          title: "Homework 1",
+          projectDescription: "This is a test.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Homework 2",
+          projectDescription: "This is a test.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Homework 3",
+          projectDescription: "This is a test.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        }
+      ]
     },
     {
       email: "student2@email.com",
