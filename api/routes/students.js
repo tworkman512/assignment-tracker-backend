@@ -11,15 +11,29 @@ const excludeKeys = "-__v -password";
 //   res.json({ status, response });
 // });
 
+// Get all the students
 router.get("/", async (req, res, next) => {
   const status = 200;
   const response = await User.find(req.query).select(excludeKeys);
   res.json({ status, response });
 });
 
-router.get("/:studentId", isLoggedIn, async (req, res, next) => {
+// router.get("/:studentId", isLoggedIn, async (req, res, next) => {
+//   const status = 200;
+//   const response = await User.findById(req.params.studentId).select(
+//     excludeKeys
+//   );
+//   console.log("### USER ID? -->", response);
+//   res.json({ status, response });
+// });
+
+// Get a specific student's data
+router.get("/:studentId", async (req, res, next) => {
   const status = 200;
-  const response = await User.findById(req.params.userId).select(excludeKeys);
+  const response = await User.findById(req.params.studentId).select(
+    excludeKeys
+  );
+  console.log("### USER ID? -->", response);
   res.json({ status, response });
 });
 
@@ -30,7 +44,7 @@ router.put(
   validate,
   async (req, res, next) => {
     const status = 200;
-    const query = { _id: req.params.userId };
+    const query = { _id: req.params.studentId };
     const options = { new: true };
     const response = await User.findOneAndUpdate(
       query,
@@ -45,7 +59,7 @@ router.put(
 router.delete("/:studentId", isLoggedIn, isSameUser, async (req, res, next) => {
   const status = 200;
 
-  const query = { _id: req.params.userId };
+  const query = { _id: req.params.studentId };
   const response = await User.findOneAndDelete(query, req.body).select(
     excludeKeys
   );

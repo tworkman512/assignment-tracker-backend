@@ -5,6 +5,9 @@ const { validate } = require("../middleware/assignments");
 
 const excludeKeys = "-__v -password";
 
+// To-Do: ADD this back in later for isLoggedIn functionality. Commented
+// it out so testing in Postman
+
 // router.get("/", isLoggedIn, async (req, res, next) => {
 //   const status = 200;
 //   const response = await User.find(req.query).select(excludeKeys);
@@ -44,15 +47,20 @@ router.put(
   }
 );
 
-router.delete("/:studentId", isLoggedIn, isSameUser, async (req, res, next) => {
-  const status = 200;
+router.delete(
+  "/:assignmentId",
+  isLoggedIn,
+  isSameUser,
+  async (req, res, next) => {
+    const status = 200;
 
-  const query = { _id: req.params.userId };
-  const response = await User.findOneAndDelete(query, req.body).select(
-    excludeKeys
-  );
+    const query = { _id: req.params.userId };
+    const response = await User.findOneAndDelete(query, req.body).select(
+      excludeKeys
+    );
 
-  res.json({ status, response });
-});
+    res.json({ status, response });
+  }
+);
 
 module.exports = router;
