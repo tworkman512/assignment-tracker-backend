@@ -5,42 +5,17 @@ const { validate } = require("../middleware/students");
 
 const excludeKeys = "-__v -password";
 
-// To-Do: ADD this back in later for isLoggedIn functionality. Commented
-// it out so testing in Postman
-
-// router.get("/", isLoggedIn, async (req, res, next) => {
-//   const status = 200;
-//   const response = await User.find(req.query).select(excludeKeys);
-//   res.json({ status, response });
-// });
-
-// Get all the students
-router.get("/", async (req, res, next) => {
+router.get("/", isLoggedIn, async (req, res, next) => {
   const status = 200;
   const response = await User.find(req.query).select(excludeKeys);
-  // console.log("### BACKEND LOG STUDENTS? -->", response);
   res.json({ status, response });
 });
 
-// To-Do: ADD this back in later for isLoggedIn functionality. Commented
-// it out so testing in Postman
-
-// router.get("/:studentId", isLoggedIn, async (req, res, next) => {
-//   const status = 200;
-//   const response = await User.findById(req.params.studentId).select(
-//     excludeKeys
-//   );
-//   console.log("### USER ID? -->", response);
-//   res.json({ status, response });
-// });
-
-// Get a specific student's assignment data
-router.get("/:studentId/assignments", async (req, res, next) => {
+router.get("/:studentId/assignments", isLoggedIn, async (req, res, next) => {
   const status = 200;
   const response = await User.findById(req.params.studentId).select(
     "assignments"
   );
-  console.log("### USER ID? -->", response);
   res.json({ status, response });
 });
 

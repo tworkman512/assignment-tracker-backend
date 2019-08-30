@@ -5,16 +5,7 @@ const { validate } = require("../middleware/assignments");
 
 const excludeKeys = "-__v -password";
 
-// To-Do: ADD this back in later for isLoggedIn functionality. Commented
-// it out so testing in Postman
-
-// router.get("/", isLoggedIn, async (req, res, next) => {
-//   const status = 200;
-//   const response = await User.find(req.query).select(excludeKeys);
-//   res.json({ status, response });
-// });
-
-router.get("/", async (req, res, next) => {
+router.get("/", isLoggedIn, async (req, res, next) => {
   const status = 200;
   const response = await Assignment.find(req.query).select(excludeKeys);
   res.json({ status, response });
