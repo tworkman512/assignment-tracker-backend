@@ -24,15 +24,15 @@ const reset = async () => {
       admin: false,
       assignments: [
         {
-          title: "Homework 1",
-          projectDescription: "This is a test.",
+          title: "HTML & CSS Final Project",
+          projectDescription: "My final project for the HTML & CSS course.",
           projectLink: "https://www.google.com/",
           graded: false,
           score: 0
         },
         {
-          title: "Homework 2",
-          projectDescription: "This is a test.",
+          title: "Flexbox Exercise",
+          projectDescription: "An exercise for working with Flexbox.",
           projectLink: "https://www.google.com/",
           graded: false,
           score: 0
@@ -51,63 +51,270 @@ const reset = async () => {
       password: bcrypt.hashSync("password", 10),
       firstName: "Student",
       lastName: "User 2",
-      admin: false
+      admin: false,
+      assignments: [
+        {
+          title: "HTML & CSS Final Project",
+          projectDescription: "My final project for the HTML & CSS course.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Flexbox Exercise",
+          projectDescription: "An exercise for working with Flexbox.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Homework 3",
+          projectDescription: "This is a test.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        }
+      ]
     },
     {
       email: "student3@email.com",
       password: bcrypt.hashSync("password", 10),
       firstName: "Student",
       lastName: "User 3",
-      admin: false
+      admin: false,
+      assignments: [
+        {
+          title: "HTML & CSS Final Project",
+          projectDescription: "My final project for the HTML & CSS course.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Flexbox Exercise",
+          projectDescription: "An exercise for working with Flexbox.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Homework 3",
+          projectDescription: "This is a test.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        }
+      ]
     },
     {
       email: "student4@email.com",
       password: bcrypt.hashSync("password", 10),
       firstName: "Student",
       lastName: "User 4",
-      admin: false
+      admin: false,
+      assignments: [
+        {
+          title: "HTML & CSS Final Project",
+          projectDescription: "My final project for the HTML & CSS course.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Flexbox Exercise",
+          projectDescription: "An exercise for working with Flexbox.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Homework 3",
+          projectDescription: "This is a test.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        }
+      ]
     },
     {
       email: "student5@email.com",
       password: bcrypt.hashSync("password", 10),
       firstName: "Student",
       lastName: "User 5",
-      admin: false
+      admin: false,
+      assignments: [
+        {
+          title: "HTML & CSS Final Project",
+          projectDescription: "My final project for the HTML & CSS course.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Flexbox Exercise",
+          projectDescription: "An exercise for working with Flexbox.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Homework 3",
+          projectDescription: "This is a test.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        }
+      ]
     },
     {
       email: "student6@email.com",
       password: bcrypt.hashSync("password", 10),
       firstName: "Student",
       lastName: "User 6",
-      admin: false
+      admin: false,
+      assignments: [
+        {
+          title: "HTML & CSS Final Project",
+          projectDescription: "My final project for the HTML & CSS course.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Flexbox Exercise",
+          projectDescription: "An exercise for working with Flexbox.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Homework 3",
+          projectDescription: "This is a test.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        }
+      ]
     },
     {
       email: "student7@email.com",
       password: bcrypt.hashSync("password", 10),
       firstName: "Student",
       lastName: "User 7",
-      admin: false
+      admin: false,
+      assignments: [
+        {
+          title: "HTML & CSS Final Project",
+          projectDescription: "My final project for the HTML & CSS course.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Flexbox Exercise",
+          projectDescription: "An exercise for working with Flexbox.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Homework 3",
+          projectDescription: "This is a test.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        }
+      ]
     },
     {
       email: "student8@email.com",
       password: bcrypt.hashSync("password", 10),
       firstName: "Student",
       lastName: "User 8",
-      admin: false
+      admin: false,
+      assignments: [
+        {
+          title: "HTML & CSS Final Project",
+          projectDescription: "My final project for the HTML & CSS course.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Flexbox Exercise",
+          projectDescription: "An exercise for working with Flexbox.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Homework 3",
+          projectDescription: "This is a test.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        }
+      ]
     },
     {
       email: "student9@email.com",
       password: bcrypt.hashSync("password", 10),
       firstName: "Student",
       lastName: "User 9",
-      admin: false
+      admin: false,
+      assignments: [
+        {
+          title: "HTML & CSS Final Project",
+          projectDescription: "My final project for the HTML & CSS course.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Flexbox Exercise",
+          projectDescription: "An exercise for working with Flexbox.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Homework 3",
+          projectDescription: "This is a test.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        }
+      ]
     },
     {
       email: "student10@email.com",
       password: bcrypt.hashSync("password", 10),
       firstName: "Student",
       lastName: "User 10",
-      admin: false
+      admin: false,
+      assignments: [
+        {
+          title: "HTML & CSS Final Project",
+          projectDescription: "My final project for the HTML & CSS course.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Flexbox Exercise",
+          projectDescription: "An exercise for working with Flexbox.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        },
+        {
+          title: "Homework 3",
+          projectDescription: "This is a test.",
+          projectLink: "https://www.google.com/",
+          graded: false,
+          score: 0
+        }
+      ]
     }
   ]);
 };

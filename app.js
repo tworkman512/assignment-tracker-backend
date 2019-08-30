@@ -24,7 +24,10 @@ app.use(require("./api/middleware/set-token"));
 app.use("/api", require("./api/routes/auth"));
 // app.use("/api/users", require("./api/routes/users"));
 app.use("/api/students", require("./api/routes/students"));
-// app.use("/api/assignments"), require("./api/routes/assignments");
+// app.use(
+//   "/api/students/:studentId/assignments",
+//   require("./api/routes/assignments")
+// );
 
 // Not Found Handler
 app.use((req, res, next) => {
